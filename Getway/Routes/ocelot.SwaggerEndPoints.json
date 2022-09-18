@@ -1,0 +1,15 @@
+﻿{
+  "SwaggerEndPoints": [
+    {
+      "Key": "ordering",
+      "TransformByOcelotConfig": true,
+      "Config": [
+        {
+          "Name": "Client.API",
+          "Version": "1.0",
+          "Url": "https://localhost:7144/client/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

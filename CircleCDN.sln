@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleCDN", "CircleCDN\CircleCDN.csproj", "{BDD7AD28-F053-403F-B6A8-40250875075B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleGetway", "Getway\CircleGetway.csproj", "{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDD7AD28-F053-403F-B6A8-40250875075B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD7AD28-F053-403F-B6A8-40250875075B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD7AD28-F053-403F-B6A8-40250875075B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD7AD28-F053-403F-B6A8-40250875075B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4620AD5D-7AB9-4AC4-AC2D-E9D52DE5ACA9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "s2.coinmarketcap.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/dynamic/{everything}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    }
+  ]
+}
