@@ -2,11 +2,11 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/{everything}",
-      "DownstreamScheme": "https",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7189
+          "Port": 5533
         }
       ],
       "UpstreamPathTemplate": "/static/{everything}",

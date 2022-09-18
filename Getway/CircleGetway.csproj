@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Routes\ocelot.SwaggerEndPoints.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Routes\ocelot.SwaggerEndPoints.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MMLib.SwaggerForOcelot" Version="5.2.0" />
     <PackageReference Include="Ocelot" Version="18.0.0" />
     <PackageReference Include="Ocelot.Provider.Polly" Version="18.0.0" />
