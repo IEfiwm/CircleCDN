@@ -12,7 +12,10 @@
       "UpstreamPathTemplate": "/dynamic/{everything}",
       "UpstreamHttpMethod": [
         "GET"
-      ]
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 180
+      }
     }
   ]
 }

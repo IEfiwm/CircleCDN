@@ -1,3 +1,4 @@
+using Ocelot.Cache.CacheManager;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Polly;
@@ -23,7 +24,14 @@ builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
 
 //builder.Services.AddOcelot();
 
-builder.Services.AddOcelot(builder.Configuration).AddPolly();
+builder
+    .Services
+    .AddOcelot(builder.Configuration)
+    .AddPolly()
+    .AddCacheManager(m =>
+    {
+        m.WithDictionaryHandle();
+    });
 
 builder.Services.AddCors(options => options.AddPolicy("CorsPolicy",
      builder =>
@@ -43,8 +51,27 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-
 await app.UseOcelot();
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("X-Codepedia-Custom-Header-Response", "Satinder singh");
+
+    context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+
+    context.Response.Headers.Add("X-Frame-Options", "DENY");
+
+    context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
+
+    context.Response.Headers.Remove("server");
+
+    context.Response.Headers.Remove("X-AspNet-Version");
+
+    context.Response.Headers.Remove("X-Powered-By");
+
+    await next();
+});
+
 
 app.UseCors("CorsPolicy");
 

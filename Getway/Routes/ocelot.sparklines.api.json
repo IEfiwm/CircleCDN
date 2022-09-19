@@ -12,7 +12,10 @@
       "UpstreamPathTemplate": "/chart/{everything}",
       "UpstreamHttpMethod": [
         "GET"
-      ]
+      ],
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
     }
   ]
 }
