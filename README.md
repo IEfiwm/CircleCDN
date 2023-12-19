@@ -1,6 +1,6 @@
 # CircleCDN
 
-CircleCDN is a project that [brief description of what the project does].
+CircleCDN is a project that manage your files.
 
 ## Table of Contents
 
