@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleCDN", "CircleCDN\Circ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircleGetway", "Getway\CircleGetway.csproj", "{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1300703E-4127-434C-B446-B0042B43FF5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AC3DB3C-D13A-4C4A-8C3C-CB774398A54F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1300703E-4127-434C-B446-B0042B43FF5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1300703E-4127-434C-B446-B0042B43FF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1300703E-4127-434C-B446-B0042B43FF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1300703E-4127-434C-B446-B0042B43FF5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

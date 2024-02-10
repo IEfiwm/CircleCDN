@@ -45,7 +45,7 @@ builder.Services.AddCors(options => options.AddPolicy("CorsPolicy",
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

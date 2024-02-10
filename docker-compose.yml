@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  circlecdn:
+    image: ${DOCKER_REGISTRY}circlecdn:${TAG}
+    build:
+      context: .
+      dockerfile: CircleCDN/Dockerfile
+
+  circlegetway:
+    image: ${DOCKER_REGISTRY}circlegetway:${TAG}
+    build:
+      context: .
+      dockerfile: Getway/Dockerfile
+
+  staticenvironment:
+    image: ${DOCKER_REGISTRY}staticenvironment:${TAG}
+    build:
+      context: .
+      dockerfile: StaticEnvironment/Dockerfile
+    volumes:
+      - C:/public:/usr/share/nginx/html
+
+
+volumes:
+  staticenvironment:

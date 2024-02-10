@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  circlecdn:
+    ports:
+      - "80"
+
+  circlegetway:
+    ports:
+      - "80"
+ 
+  staticenvironment:
+    ports:
+      - "80"

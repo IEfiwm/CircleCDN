@@ -5,8 +5,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5533
+          "Host": "staticenvironment",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/static/{everything}",

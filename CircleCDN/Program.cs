@@ -17,7 +17,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 // Use HTTPS Strict Transport Security (HSTS)
-app.UseHsts();
+//app.UseHsts();
 
 // Use Content Security Policy (CSP)
 app.Use(async (context, next) =>
@@ -31,7 +31,7 @@ app.Use(async (context, next) =>
         return Task.CompletedTask;
     });
 
-    context.Request.Scheme = "https"; // Set the scheme to https
+    //context.Request.Scheme = "https"; // Set the scheme to https
 
     await next();
 });
@@ -42,7 +42,7 @@ app.UseCors(policy =>
     policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
 });
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseResponseCaching();
 app.MapControllers();
