@@ -1,0 +1,19 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "circlecdn",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/uploadcenter/{everything}",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ]
+    }
+  ]
+}

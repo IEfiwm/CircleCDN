@@ -61,7 +61,7 @@ namespace CircleCDN.Controllers
             }
         }
 
-        [HttpPost("Upload")]
+        [HttpPost("/Upload")]
         public IActionResult Upload(IFormFile file)
         {
             try
