@@ -2,13 +2,15 @@ version: '3.4'
 
 services:
   circlecdn:
-    image: ${DOCKER_REGISTRY}circlecdn:${TAG}
+    image: ${DOCKER_REGISTRY}circle_cdn:${TAG}
     build:
       context: .
       dockerfile: CircleCDN/Dockerfile
+    volumes:
+      - /public:/public
 
   circlegetway:
-    image: ${DOCKER_REGISTRY}circlegetway:${TAG}
+    image: ${DOCKER_REGISTRY}public_cdn:${TAG}
     build:
       context: .
       dockerfile: Getway/Dockerfile
@@ -19,7 +21,7 @@ services:
       context: .
       dockerfile: StaticEnvironment/Dockerfile
     volumes:
-      - C:/public:/usr/share/nginx/html
+      - /public:/usr/share/nginx/html
 
 
 volumes:

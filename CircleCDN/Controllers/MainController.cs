@@ -25,7 +25,11 @@ namespace CircleCDN.Controllers
         {
             try
             {
-                var root = _configuration["AppSettings:Root"];
+                string root = Environment.GetEnvironmentVariable("AppSettings_Root");
+
+                if (string.IsNullOrEmpty(root))
+                    root = _configuration["AppSettings:Root"];
+
                 var pathToFile = Path.Combine(root, filename);
 
                 if (!_memoryCache.TryGetValue(filename, out FileStream fileStream))
@@ -53,7 +57,11 @@ namespace CircleCDN.Controllers
             {
                 _logger.LogError(e, "Error serving file. Falling back to default photo.");
 
-                var defaultPhoto = _configuration["AppSettings:DefaultPhoto"];
+                string defaultPhoto = Environment.GetEnvironmentVariable("AppSettings:DefaultPhoto");
+
+                if (string.IsNullOrEmpty(defaultPhoto))
+                    defaultPhoto = _configuration["AppSettings:DefaultPhoto"];
+
                 var file = System.IO.File.OpenRead(defaultPhoto);
                 var ext = Path.GetExtension(defaultPhoto).TrimStart('.');
 
@@ -70,8 +78,11 @@ namespace CircleCDN.Controllers
                 {
                     return BadRequest("Invalid file");
                 }
+                string root = Environment.GetEnvironmentVariable("AppSettings_Root");
 
-                var root = _configuration["AppSettings:Root"];
+                if (string.IsNullOrEmpty(root))
+                    root = _configuration["AppSettings:Root"];
+
                 var filename = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
                 var pathToFile = Path.Combine(root, filename);
 
