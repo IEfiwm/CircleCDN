@@ -14,6 +14,8 @@ services:
     build:
       context: .
       dockerfile: Getway/Dockerfile
+    volumes:
+      - /routes:/app/Routes
 
   staticenvironment:
     image: ${DOCKER_REGISTRY}staticenvironment:${TAG}
