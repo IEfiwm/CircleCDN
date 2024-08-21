@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   circlecdn:
-    image: ${DOCKER_REGISTRY}circle_cdn:${TAG}
+    image: ${DOCKER_REGISTRY}upload_cdn:${TAG}
     build:
       context: .
       dockerfile: CircleCDN/Dockerfile
@@ -18,13 +18,12 @@ services:
       - /routes:/app/Routes
 
   staticenvironment:
-    image: ${DOCKER_REGISTRY}staticenvironment:${TAG}
+    image: ${DOCKER_REGISTRY}static_environment:${TAG}
     build:
       context: .
       dockerfile: StaticEnvironment/Dockerfile
     volumes:
       - /public:/usr/share/nginx/html
-
 
 volumes:
   staticenvironment:
